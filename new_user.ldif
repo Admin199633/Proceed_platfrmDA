@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable MFA</title>
+</head>
+<body>
+    <h1>Enable Multi-Factor Authentication</h1>
+
+    <p>Scan the QR code using your authenticator app and enter the code below:</p>
+
+    <img src="{{ qr_code_url }}" alt="QR Code">
+
+    <form method="post" action="{{ url_for('enable_mfa') }}">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" name="otp" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
